@@ -1,0 +1,70 @@
+<div class="form-container">
+  <h1 *ngIf="!form.value.id">Agregar Jugador</h1>
+  <h1 *ngIf="!!form.value.id">Actualizar Jugador</h1>
+  <form [formGroup]="form" class="form">
+
+    <div *ngIf="!!form.value.id" class="form-group">
+      <label for="id">ID:</label>
+      <input type="text" readonly id="id" formControlName="id">
+    </div>
+
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" formControlName="nombre">
+    </div>
+    <p class="validation" *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['required']">
+      Nombre es requerido.
+    </p>
+
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" formControlName="apellido">
+    </div>
+    <p class="validation" *ngIf="form.get('apellido')?.touched && form.get('apellido')?.errors?.['required']">
+      Apellido es requerido.
+    </p>
+
+    <div class="form-group">
+      <label for="posicion">Posicion</label>
+      <select type="text" id="posicion" formControlName="posicion">
+        <option value="" selected disabled>Elige una posición</option>
+        <option *ngFor="let pos of posiciones"> {{pos}} </option>
+      </select>
+    </div>
+    <p class="validation" *ngIf="form.get('posicion')?.touched && form.get('posicion')?.errors?.['required']">
+      Posicion es requerido.
+    </p>
+
+    <div class="form-group">
+      <label for="equipo">Equipo</label>
+      <input type="text" id="equipo" formControlName="equipo">
+    </div>
+    <p class="validation" *ngIf="form.get('equipo')?.touched && form.get('equipo')?.errors?.['required']">
+      Equipo es requerido.
+    </p>
+
+    <div class="form-group">
+      <label for="imagen">Seleccionar imagen</label>
+      <input class="hidden" type="file" (change)="onImagenSeleccionada($event)" #hiddenfileinput>
+
+      <div class="input-group">
+        <button (click)="hiddenfileinput.click()" type="button" title="importar">
+          <i class="">🖼️</i>
+        </button>
+        <input type="text" formControlName="imagen" placeholder="assets/img/ejemplo.webp" #imagenSrc>
+      </div>
+
+    </div>
+    <p class="validation" *ngIf="form.get('imagen')?.touched && form.get('imagen')?.errors?.['required']">
+      La imagen es requerida.
+    </p>
+    <div class="image-container" *ngIf="imagenSrc.value">
+      <img [src]="imagenSrc.value" width="100" alt="" srcset="">
+    </div>
+
+    <div class="form-buttons">
+      <a class="btn btn-secondary" routerLink="/admin">Cancelar</a>
+      <button class="btn btn-primary" (click)="guardar()" [disabled]="form.invalid">Guardar</button>
+    </div>
+  </form>
+</div>

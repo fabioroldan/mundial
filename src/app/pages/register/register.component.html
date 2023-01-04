@@ -1,0 +1,30 @@
+<div class="form-container">
+
+  <h2>Registro de usuario</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+    <div class="form-group">
+      <label for="emailReg">Email</label>
+      <input type="text" formControlName="email" id="emailReg">
+    </div>
+    <p class="validation" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']">
+      Mail es requerido.
+    </p>
+    <p class="validation" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['email']">
+      Mail invalido.
+    </p>
+    <div class="form-group">
+      <label class="form-label" for="passwordReg">Password</label>
+      <input type="password" formControlName="password" id="passwordReg">
+    </div>
+    <p class="validation" *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']">
+      Password es requerido.
+    </p>
+    <p class="validation" *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['minlength']">
+      Password debe tener mas de 5 caracteres.
+    </p>
+    <div class="form-buttons">
+      <input type="submit" value="Enviar">
+    </div>
+  </form>
+
+</div>

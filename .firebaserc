@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mundial-8244f": {
+      "hosting": {
+        "mundial": [
+          "mundial-8244f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mundial-8244f"
+  }
+}

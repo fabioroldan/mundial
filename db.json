@@ -1,0 +1,212 @@
+{
+  "jugador": [
+    {
+      "nombre": "Emiliano",
+      "apellido": "Martínez",
+      "equipo": "Aston Villa",
+      "posicion": "arquero",
+      "imagen":"assets/images/img.webp",
+      "id": 0
+    },
+    {
+      "nombre": "Gerónimo",
+      "apellido": "Rulli",
+      "equipo": "Villarreal",
+      "posicion": "arquero",
+      "imagen":"assets/images/img.webp",
+      "id": 1
+    },
+    {
+      "nombre": "Franco",
+      "apellido": "Armani",
+      "equipo": "River",
+      "posicion": "arquero",
+      "imagen":"assets/images/img.webp",
+      "id": 2
+    },
+    {
+      "nombre": "Nahuel",
+      "apellido": "Molina",
+      "equipo": "Atlético de Madrid",
+      "posicion": "defensor",
+      "imagen":"assets/images/img.webp",
+      "id": 3
+    },
+    {
+      "nombre": "Gonzalo",
+      "apellido": "Montiel",
+      "equipo": "Sevilla",
+      "posicion": "defensor",
+      "imagen":"assets/images/img.webp",
+      "id": 4
+    },
+    {
+      "nombre": "Cristian",
+      "apellido": "Romero",
+      "equipo": "Tottenham",
+      "posicion": "defensor",
+      "imagen":"assets/images/img.webp",
+      "id": 5
+    },
+    {
+      "nombre": "Germán",
+      "apellido": "Pezzella",
+      "equipo": "Betis",
+      "posicion": "defensor",
+      "imagen":"assets/images/img.webp",
+      "id": 6
+    },
+    {
+      "nombre": "Nicolás",
+      "apellido": "Otamendi",
+      "equipo": "Benfica",
+      "posicion": "defensor",
+      "imagen":"assets/images/img.webp",
+      "id": 7
+    },
+    {
+      "nombre": "Lisandro",
+      "apellido": "Martínez",
+      "equipo": "Manchester United",
+      "posicion": "defensor",
+      "imagen":"assets/images/img.webp",
+      "id": 8
+    },
+    {
+      "nombre": "Marcos",
+      "apellido": "Acuña",
+      "equipo": "Sevilla",
+      "posicion": "defensor",
+      "imagen":"assets/images/img.webp",
+      "id": 9
+    },
+    {
+      "nombre": "Nicolás",
+      "apellido": "Tagliafico",
+      "equipo": "Olympique de Lyon",
+      "posicion": "defensor",
+      "imagen":"assets/images/img.webp",
+      "id": 10
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Foyth",
+      "equipo": "Villarreal",
+      "posicion": "defensor",
+      "imagen":"assets/images/img.webp",
+      "id": 11
+    },
+    {
+      "nombre": "Rodrigo",
+      "apellido": " De Paul",
+      "equipo": "Atlético de Madrid",
+      "posicion": "mediocampista",
+      "imagen":"assets/images/img.webp",
+      "id": 12
+    },
+    {
+      "nombre": "Leandro",
+      "apellido": "Paredes",
+      "equipo": "Juventus",
+      "posicion": "mediocampista",
+      "imagen":"assets/images/img.webp",
+      "id": 13
+    },
+    {
+      "nombre": "Alexis",
+      "apellido": "Mac Allister",
+      "equipo": "Brighton",
+      "posicion": "mediocampista",
+      "imagen":"assets/images/img.webp",
+      "id": 14
+    },
+    {
+      "nombre": "Guido",
+      "apellido": "Rodríguez",
+      "equipo": "Betis",
+      "posicion": "mediocampista",
+      "imagen":"assets/images/img.webp",
+      "id": 15
+    },
+    {
+      "nombre": "Alejandro",
+      "apellido": "Gómez",
+      "equipo": "Sevilla",
+      "posicion": "mediocampista",
+      "imagen":"assets/images/img.webp",
+      "id": 16
+    },
+    {
+      "nombre": "Enzo",
+      "apellido": "Fernández",
+      "equipo": "Benfica",
+      "posicion": "mediocampista",
+      "imagen":"assets/images/img.webp",
+      "id": 17
+    },
+    {
+      "nombre": "Exequiel",
+      "apellido": "Palacios",
+      "equipo": "Bayer Leverkusen",
+      "posicion": "mediocampista",
+      "imagen":"assets/images/img.webp",
+      "id": 18
+    },
+    {
+      "nombre": "Ángel",
+      "apellido": "Di María",
+      "equipo": "Juventus",
+      "posicion": "delantero",
+      "imagen":"assets/images/img.webp",
+      "id": 19
+    },
+    {
+      "nombre": "Lautaro",
+      "apellido": "Martínez",
+      "equipo": "Inter",
+      "posicion": "delantero",
+      "imagen":"assets/images/img.webp",
+      "id": 20
+    },
+    {
+      "nombre": "Julián",
+      "apellido": "Álvarez",
+      "equipo": "Manchester City",
+      "posicion": "delantero",
+      "imagen":"assets/images/img.webp",
+      "id": 21
+    },
+    {
+      "nombre": "Paulo",
+      "apellido": "Dybala",
+      "equipo": "Roma",
+      "posicion": "delantero",
+      "imagen":"assets/images/img.webp",
+      "id": 22
+    },
+    {
+      "nombre": "Nicolás",
+      "apellido": "González",
+      "equipo": "Fiorentina",
+      "posicion": "delantero",
+      "imagen":"assets/images/img.webp",
+      "id": 23
+    },
+    {
+      "nombre": "Joaquín",
+      "apellido": "Correa",
+      "equipo": "Inter",
+      "posicion": "delantero",
+      "imagen":"assets/images/img.webp",
+      "id": 24
+    },
+    {
+      "nombre": "Lionel",
+      "apellido": "Messi",
+      "equipo": "París Saint-Germain",
+      "posicion": "delantero",
+      "imagen":"assets/images/img.webp",
+      "id": 25
+    }
+  ]
+}

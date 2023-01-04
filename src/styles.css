@@ -1,1 +1,321 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --clr-1: hsla(197, 37%, 24%, 1);
+  --clr-2: hsla(173, 58%, 39%, 1);
+  --clr-3: hsla(43, 74%, 66%, 1);
+  --clr-4: hsla(27, 87%, 67%, 1);
+  --clr-5: hsla(12, 76%, 61%, 1);
+
+  --clr-neutral-lightest: hsl(0, 0%, 95%);
+  --clr-neutral-light: hsl(0, 0%, 85%);
+  --clr-neutral: hsl(0, 0%, 50%);
+  --clr-neutral-dark: hsl(0, 0%, 15%);
+  --clr-neutral-darkest: hsl(0, 0%, 6%);
+
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background-color: whitesmoke;
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--clr-1);
+  height: 3rem;
+  padding: 0 1rem;
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+
+}
+
+.page {
+  padding: 1rem 1rem 4rem;
+}
+
+
+
+a, button {
+  background-color: var(--clr-5);
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  font-weight: normal;
+  padding: .5rem;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-secondary{
+  background-color: var(--clr-neutral-light);
+}
+
+.router-link-active {
+  font-weight: bold;
+}
+
+/* :::::::::::::::::::: FORM :::::::::::::::::::: */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  background-color: var(--clr-neutral-lightest);
+  border-radius: 2rem;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.form-group>div {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.form-group:has(img, div, textarea) label {
+  align-self: flex-start;
+}
+
+.form-group.buttons {
+  margin-top: 2rem;
+}
+
+
+.form input,
+.form select,
+.form textarea,
+.form .input-file::before {
+  display: block;
+  width: 100%;
+  min-height: 1rem;
+  border: none;
+  background-color: var(--clr-neutral-light);
+  box-shadow: var(--in-shadow);
+  border-radius: .5rem;
+  padding: .5rem;
+}
+
+.form .textarea {
+  min-height: 4rem;
+  resize: vertical;
+}
+
+.form input:read-only,
+.form textarea:read-only {
+  box-shadow: none;
+}
+
+.form label {
+  display: block;
+  width: 15rem;
+}
+
+.form .title {
+  margin-top: 1rem;
+}
+
+.form .file-thumbnail {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  aspect-ratio: 1;
+  background-color: whitesmoke;
+  padding: 0rem;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  box-shadow: var(--shadow);
+}
+
+.form .hidden {
+  display: none;
+}
+
+.form .input-group {
+  display: flex;
+  background-color: var(--clr-neutral-light);
+  border-radius: .5rem;
+}
+
+.form .input-group:first-child {
+background-color: ;}
+
+.form .form-buttons{
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+}
+
+.image-container{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+
+.form .validation{
+  margin: 0;
+  font-size: .75rem;
+  display: flex;
+  justify-content: right;
+}
+
+.toast {
+  display: block;
+  position: absolute;
+  top: 5rem;
+  left: 10%;
+  width: 80%;
+  background-color: var(--clr-neutral-lightest);
+  color: var(--clr-neutral-darkest);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.toast-success {
+  box-shadow: inset .5rem 0 0 var(--clr-success), inset -.5rem 0 0 var(--clr-success), var(--shadow);
+}
+
+.toast-error {
+  box-shadow: inset .5rem 0 0 var(--clr-danger), inset -.5rem 0 0 var(--clr-danger), var(--shadow);
+}
+
+.toast-info {
+  box-shadow: inset .5rem 0 0 var(--clr-info), inset -.5rem 0 0 var(--clr-info), var(--shadow);
+}
+
+
+hr{
+  width: 30rem;
+  margin: 2rem;
+}
+
+/* :::::::::::::::::::: CARD :::::::::::::::::::: */
+
+.cards-container {
+  container-type: inline-size;
+  /* needs to be size for height too */
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-flow: dense;
+}
+
+.card {
+  display: grid;
+  padding: 1rem;
+  gap: 1rem;
+  position: relative;
+  /* border: 1px solid grey; */
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+
+
+.card:has(.visual) {
+  grid-template-columns: 1fr;
+}
+
+.card :first-child {
+  margin-top: 0;
+}
+
+@container (min-width: 900px) {
+  .card:has(.visual) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* :::::::::::::::::::: LIST :::::::::::::::::::: */
+.list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list .item:nth-child(odd){
+  background-color: rgb(227, 227, 227);
+  border-radius: .5rem;
+}
+
+.item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .5rem;
+  padding: .5rem;
+}
+
+.list button, .list a {
+  background-color: lightgray;
+  font-style: normal;
+}
+
+/* :::::::::::::::::::: UTILITIES :::::::::::::::::::: */
+
+.f-jsb{
+  display: flex;
+  justify-content: space-between;
+}
+
+.f-jc{
+  display: flex;
+  justify-content: center;
+}
+
+.f-aic{
+  display: flex;
+align-items: center
+;}
+
+.f-gap1 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.f-gap2 {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+
+.mb2
+{
+margin-bottom: 2rem;
+}
+
+

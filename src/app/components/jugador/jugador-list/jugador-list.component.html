@@ -1,0 +1,7 @@
+<h2>Lista Jugadores</h2>
+<ul class="cards-container">
+  <li *ngFor="let jugador of jugadores" class="card">
+    <span>{{jugador.nombre}} {{jugador.apellido}}</span>
+    <img [src]="jugador.imagen" width="100" alt="" srcset="" class="visual">
+  </li>
+</ul>

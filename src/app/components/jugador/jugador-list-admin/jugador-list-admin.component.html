@@ -1,0 +1,17 @@
+<header class="f-jsb f-aic mb2">
+  <h2>Lista Jugadores</h2>
+  <a [routerLink]="['./jugador/crear']">Agregar</a>
+</header>
+<ul class="p-0 list">
+  <li *ngFor="let jugador of jugadores" class="item">
+    <span>{{jugador.id}} - {{jugador.nombre}} {{jugador.apellido}}</span>
+    <span class="f-gap1">
+      <button type="button" (click)="borrar(jugador.id)">
+        <i>🗑️</i>
+      </button>
+      <a [routerLink]="['./jugador/editar',jugador.id]">
+        <i class="">✏️</i>
+      </a>
+    </span>
+  </li>
+</ul>
